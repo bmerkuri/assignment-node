@@ -1,16 +1,10 @@
+
 const _ = require('lodash')
 
-const fs = require('fs')
+const arr1 = [6, 7, 8, 9, 10]
 
-let numbersFromJson = fs.readFileSync('array.json')
-
-let numbersJson = JSON.parse(numbersFromJson)
-
-const numbers = numbersJson.number
-
-
-function concat(arr) {
-    return _.concat(arr, numbers)
+const concat = (arr) => {
+    return _.concat(arr, arr1);
 }
 
-module.exports.concat = concat
+module.exports.concat = concat;
