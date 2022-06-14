@@ -1,7 +1,12 @@
-const fs = require('fs')
 const concat = require('./concat')
 const sum = require('./sum')
-const data = JSON.parse(fs.readFileSync('array.json', 'utf8')).array;
+
+const fs = require('fs').promises;
+
+const read = async () => {
+  const data = await fs.readFile("array.json", "utf8");
+  return new Buffer(data);
+}
 const numbersToAdd = [1, 2, 3, 4, 5]
 const con = concat.concat(numbersToAdd);
 const sumTotale = sum.sum(con);
