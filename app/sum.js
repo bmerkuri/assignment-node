@@ -8,6 +8,7 @@ const numbers = numbersJson.number
 
 const sumJson = numbers.reduce((sum, nums) => sum + nums, 0)
 
+
 function sum(arr) {
     return arr.reduce(function(a, b) {
         return a + b
